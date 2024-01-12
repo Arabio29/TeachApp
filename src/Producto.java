@@ -1,20 +1,33 @@
 public class Producto {
-
+    //atributos
     public String nombre;
-    public int precio;
+    public double precio;
     public int stock;
 
-    public producto(String nombre, int precio, int stock){
+    //constructor
+    public producto(String nombre, double precio, int stock){
         this.nombre = nombre;
         this.precio = precio;
         this.stock = stock;
     }
 
-    public void realizarVenta(){
-        System.out.println("Comprando...");
-        System.out.println("Compra realizada con exito :)");
+    //metodo realizar venta
+    public void realizarVenta(int cantidad){
+        if (cantidad > 0 && cantidad <= stock) {
+            stock -= cantidad;
+            System.out.println("Venta realizada:");
+            System.out.println("Producto: " + nombre);
+            System.out.println("Precio unitario: $" + precio);
+            System.out.println("Cantidad vendida: " + cantidad);
+            System.out.println("Total: $" + (precio * cantidad));
+            System.out.println("Stock restante: " + stock);
+        } else {
+            System.out.println("No hay stock suficiente para la venta.");
+        }
+    }
     }
 
+    //guetters :V
     public String getNombre() {
         return nombre;
     }
