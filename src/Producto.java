@@ -1,3 +1,4 @@
+//by: eliasib y sus tesos  xd
 public class Producto {
     //atributos
     public String nombre;
@@ -5,7 +6,7 @@ public class Producto {
     public int stock;
 
     //constructor
-    public producto(String nombre, double precio, int stock){
+    public Producto(String nombre, double precio, int stock){
         this.nombre = nombre;
         this.precio = precio;
         this.stock = stock;
@@ -25,18 +26,5 @@ public class Producto {
             System.out.println("No hay stock suficiente para la venta.");
         }
     }
-    }
 
-    //guetters :V
-    public String getNombre() {
-        return nombre;
-    }
-
-    public int getPrecio() {
-        return precio;
-    }
-
-    public int getStock() {
-        return stock;
-    }
 }
